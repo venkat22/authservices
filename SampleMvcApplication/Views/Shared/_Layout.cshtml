@@ -26,6 +26,7 @@
                     @if(System.Web.HttpContext.Current.User.Identity.IsAuthenticated)
                     {
                         <li>@Html.ActionLink("Logout", "Logout", "AuthServices")</li>
+                        <li><a href="@Url.Content("~/WebAPITest.html")">Test WebAPI Call</a></li>
                     }
                 </ul>
             </div>
