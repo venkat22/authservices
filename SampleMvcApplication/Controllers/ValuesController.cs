@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SampleMvcApplication.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -8,7 +9,8 @@ using System.Web.Http;
 
 namespace SampleMvcApplication.Controllers
 {
-    [Authorize]
+    [ClaimsAuthorizeAttribute("Lastname","Yerrapothu")]
+
     public class ValuesController : ApiController
     {
         // GET api/<controller>
