@@ -1,0 +1,4 @@
+
+makecert -pe -n "CN=CMDB APP @DHS" -a sha256 -cy end -sky exchange   -sv CMDBAPP.pvk CMDBAPP.cer
+
+pvk2pfx -pvk CMDBAPP.pvk -spc CMDBAPP.cer -pfx CMDBAPP.pfx 

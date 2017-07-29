@@ -147,6 +147,9 @@
     <Content Include="App_Data\Kentor.AuthServices.StubIdp.cer" />
     <Content Include="App_Data\Kentor.AuthServices.Tests.pfx" />
     <Content Include="WebAPITest.html" />
+    <Content Include="App_Data\CMDBAPP.cer" />
+    <Content Include="App_Data\CMDBAPP.pfx" />
+    <Content Include="App_Data\CMDBAPP.pvk" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
