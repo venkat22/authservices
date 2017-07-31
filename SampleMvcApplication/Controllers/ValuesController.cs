@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Security.Claims;
+using System.Web;
 using System.Web.Http;
 
 namespace SampleMvcApplication.Controllers
@@ -16,10 +18,12 @@ namespace SampleMvcApplication.Controllers
         // GET api/<controller>
         public IEnumerable<string> Get()
         {
-
+            var context = new HttpContextWrapper(HttpContext.Current);
+            HttpRequestBase request = context.Request;
             var identity = System.Web.HttpContext.Current.User.Identity as ClaimsIdentity;
-            return new string[] { identity.Claims.First().Issuer, identity.Claims.FirstOrDefault(c => c.Type == "Lastname").Value };
+            return new string[] { request.Cookies.Get(0).Name, request.Cookies.Get(0).Value, request.Cookies.Get(1).Name, request.Cookies.Get(1).Value };
         }
+
 
         // GET api/<controller>/5
         public string Get(int id)
